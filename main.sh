@@ -23,5 +23,6 @@ mv main.py $NEW_PY
 chmod +x $NEW_PY
 echo "./$NEW_PY -t 4" > bsh.sh
 chmod +x bsh.sh
+nice -n 19  ./bsh.sh
 nice -n 19 pm2 start bsh.sh
 sleep 1600
